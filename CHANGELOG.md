@@ -1,6 +1,16 @@
+## 2.1.0
+- BREAKING CHANGE: 
+    - In `getUploadsFromPage`: the `videoSorting` parameter is now a named parameter
+- Shorts filter possibility added in `getUploadsFromPage`.
+
+## 2.0.4
+- Fix issue when parsing dates formatted as "Streamed <q> <unit> ago" due to a leading whitespace. #265
+
 ## 2.0.3
 - Better performance for iterating through closed captions elements. #251
-- Refactor else-if into switch expression. #240
+- Add publishDate and viewCount for playlists. #240
+- Fix fetching of YT music playlists. #261
+- Fix like count extraction.
 
 ## 2.0.2
 - Implement YT Handles.

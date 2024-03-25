@@ -167,12 +167,15 @@ extension StringUtility2 on String? {
       return null;
     }
 
-    var parts = this!.split(' ');
+    var parts = this!.trim().split(' ');
     if (parts.length == 4) {
       // Streamed x y ago
       parts = parts.skip(1).toList();
     }
-    assert(parts.length == 3);
+
+    if (parts.length != 3) {
+      return null;
+    }
 
     final qty = int.parse(parts.first);
 
